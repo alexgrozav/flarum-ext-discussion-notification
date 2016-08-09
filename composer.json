@@ -1,0 +1,23 @@
+{
+    "name": "flarum/flarum-ext-new-posts",
+    "description": "Receive an email whenever a new post is added.",
+    "type": "flarum-extension",
+    "require": {
+        "flarum/core": "^0.1.0-beta.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flarum\\NewPostsSubscription\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "New Posts Notification",
+            "icon": {
+                "name": "envelope",
+                "backgroundColor": "#000",
+                "color": "#fff"
+            }
+        }
+    }
+}
