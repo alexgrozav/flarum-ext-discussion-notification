@@ -1,5 +1,7 @@
 <?php
-
+use Flarum\Core;
+use Flarum\Core\Repository\UserRepository;
+use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\Event\PostWillBeSaved;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Mail\Mailer;
