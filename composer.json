@@ -1,13 +1,13 @@
 {
-    "name": "flarum/flarum-ext-new-posts",
-    "description": "Receive an email whenever a new post is added.",
+    "name": "flarum/flarum-ext-discussion-notification",
+    "description": "Receive an email whenever a new discussion is added.",
     "type": "flarum-extension",
     "require": {
         "flarum/core": "^0.1.0-beta.5"
     },
     "extra": {
         "flarum-extension": {
-            "title": "New Posts Notification",
+            "title": "Discussion Notification",
             "icon": {
                 "name": "envelope",
                 "backgroundColor": "#000",
