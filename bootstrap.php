@@ -7,19 +7,17 @@ use Illuminate\Mail\Message;
 
 return function (Dispatcher $events, Mailer $mailer) {
   $events->listen(DiscussionWillBeSaved::class, function (DiscussionWillBeSaved $event) {
-    $title = $event->discussion->title;
-    $url = $event->discussion->url;
-    $content =  $event->actor->username .
-                " has started a new discussion at " .
-                $link .
-                ": <br>" .
-                $event->discussion->content;
+    $discussion = $event->discussion;
+    // $content =  $event->actor->username .
+    //             " has started a new discussion at " .
+    //             $discussion->url .
+    //             ": <br>" .
+    //             $event->discussion->content;
 
-    $mailer->raw(
-        ['raw' => $content],
-        function (Message $message) use ($title) {
-            $message->to('alex@pixevil.com', "Alex Grozav")
-                    ->subject("[Support] " . $title);
+    $content = "ERMAHGERD.";
+    $mailer->raw($content, function (Message $message) use ($discussion) {
+            $message->to('alex@grozav.com');
+            $message->subject("[Support] ");
         }
     );
   });
