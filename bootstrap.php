@@ -10,7 +10,7 @@ use Illuminate\Mail\Message;
 return function (Dispatcher $events, Mailer $mailer) {
   $events->listen(DiscussionWasStarted::class, function (DiscussionWasStarted $event) use ($mailer) {
     $discussion = $event->discussion;
-    $content =  "There's a new post on http://support.pixevil.com \n\n" .
+    $content =  "There's a new discussion on http://support.pixevil.com \n\n\n" .
                 $discussion->startPost->content;
 
     $mailer->raw($content, function (Message $message) use ($discussion) {
