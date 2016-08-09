@@ -14,8 +14,8 @@ return function (Dispatcher $events, Mailer $mailer) {
                 $discussion->startPost->content;
 
     $mailer->raw($content, function (Message $message) use ($discussion) {
-        $message->to('alex@grozav.com');
-        $message->subject("[Support Forum] " . $discussion->title);
+        $message->to('alex@pixevil.com');
+        $message->subject("[Support] " . $discussion->title);
       }
     );
   });
